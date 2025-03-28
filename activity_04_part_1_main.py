@@ -4,7 +4,7 @@ classes.
 
 __author__ = "ACE Faculty"
 __version__ = "1.0.0"
-__credits__ = ""
+__credits__ = "Navraj singh"
 
 # REQUIREMENT - add import statements
 from contact_list.contact_list import ContactList

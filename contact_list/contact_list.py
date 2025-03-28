@@ -2,7 +2,7 @@
 
 __author__ = "ACE Faculty"
 __version__ = "1.0.0"
-__credits__ = ""
+__credits__ = "Navraj singh"
 
 from PySide6.QtWidgets import  QMainWindow, QLineEdit, QPushButton, QTableWidget, QLabel, QVBoxLayout, QWidget, QTableWidgetItem
 from PySide6.QtCore import Slot 
@@ -70,7 +70,7 @@ class ContactList(QMainWindow):
         self.contact_table.setItem(row_position, 0, name_item)
         self.contact_table.setItem(row_position, 1, phone_item)
 
-        if not contact_name or phone_number:
+        if not contact_name or not phone_number:
             self.status_label.setText(f"Please enter a contact name and phone number")
         else:
             self.status_label.setText(f"Added contact: {contact_name}")
