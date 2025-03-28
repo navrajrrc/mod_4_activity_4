@@ -19,3 +19,4 @@ if __name__ == "__main__":
     window = ContactList()
     window.show()
     sys.exit(app.exec())
+    
