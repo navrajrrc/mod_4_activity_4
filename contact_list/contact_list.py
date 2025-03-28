@@ -75,4 +75,23 @@ class ContactList(QMainWindow):
         else:
             self.status_label.setText(f"Added contact: {contact_name}")
 
-        
+    @Slot()
+    def on_remove_contact(self):
+        """
+        This method will handle the process of removing a contact and respond
+        according to the selected option by the user.
+        """
+        selected_row = self.contact_table.currentRow()
+
+        if selected_row >= 0:
+            reply = QMessageBox.question(self, "Contact", "Are you sure you want to remove the selected contact?",
+            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+
+            if reply == QMessageBox.Yes:
+                self.contact_table.removeRow(selected_row)
+                self.status_label.setText("Contact removed")
+            else:
+                pass
+
+        else:
+            self.status_label.setText("Please select a row to be removed.")
